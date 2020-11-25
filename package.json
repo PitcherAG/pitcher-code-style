@@ -1,0 +1,35 @@
+{
+  "name": "@pitcher/code-style",
+  "version": "0.0.1",
+  "description": "Code style guide and ESLint configuration for JavaScript & Vue projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "peerDependencies": {
+    "eslint": ">= 7.14",
+    "eslint-plugin-vue": ">= 7.1.0",
+    "eslint-plugin-standard": ">= 4.0.0",
+    "babel-eslint": ">= 10.1.0",
+    "eslint-plugin-import": ">= 2.20.2",
+    "eslint-plugin-node": ">= 11.1.0",
+    "eslint-plugin-promise": ">= 4.2.1",
+    "@vue/eslint-config-standard": ">= 5.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PitcherAG/pitcher-code-style.git"
+  },
+  "keywords": [
+    "pitcher",
+    "code style",
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Pitcher AG",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PitcherAG/pitcher-code-style/issues"
+  },
+  "homepage": "https://github.com/PitcherAG/pitcher-code-style#readme"
+}
