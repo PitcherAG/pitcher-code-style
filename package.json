@@ -1,24 +1,16 @@
 {
-  "name": "@pitcher/code-style",
-  "version": "0.0.1",
+  "name": "@pitcher/eslint-config",
+  "version": "1.0.0-beta.0",
   "description": "Code style guide and ESLint configuration for JavaScript & Vue projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "peerDependencies": {
-    "eslint": ">= 7.14",
-    "eslint-plugin-vue": ">= 7.1.0",
-    "eslint-plugin-standard": ">= 4.0.0",
-    "babel-eslint": ">= 10.1.0",
-    "eslint-plugin-import": ">= 2.20.2",
-    "eslint-plugin-node": ">= 11.1.0",
-    "eslint-plugin-promise": ">= 4.2.1",
-    "@vue/eslint-config-standard": ">= 5.1.2"
-  },
+  "author": "Pitcher AG",
+  "license": "ISC",
+  "homepage": "https://github.com/PitcherAG/pitcher-code-style#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PitcherAG/pitcher-code-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PitcherAG/pitcher-code-style/issues"
   },
   "keywords": [
     "pitcher",
@@ -26,10 +18,21 @@
     "eslint",
     "eslintconfig"
   ],
-  "author": "Pitcher AG",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PitcherAG/pitcher-code-style/issues"
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "javascript.js",
+    "vue.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "homepage": "https://github.com/PitcherAG/pitcher-code-style#readme"
+  "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-plugin-vue": ">=7.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.14.0",
+    "eslint-plugin-vue": ">=7.1.0"
+  }
 }
