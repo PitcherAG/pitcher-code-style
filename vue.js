@@ -36,7 +36,6 @@ module.exports = {
     }],
     'vue/no-potential-component-option-typo': ['error'],
     'vue/html-comment-content-spacing': ['error', 'always'],
-    'vue/html-comment-indent': ['error'],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
     'vue/no-duplicate-attr-inheritance': ['error'],
     'vue/no-static-inline-styles': ['error', {
