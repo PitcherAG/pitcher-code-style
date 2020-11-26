@@ -12,6 +12,8 @@ Code style guide for JavaScript &amp; Vue projects, eslint rule package
 2. In your `.eslintrc.js` or `.eslintrc.json` file add
     - for Vue projects: `extends: ["@pitcher"]` or `extends: ["@pitcher/eslint-config/vue"]`
     - for plain JavaScript projects: `extends: ["@pitcher/eslint-config/javascript"]`
+  
+**NOTE:** By default the package exports **Vue** configuration. So using `extends: ["@pitcher"]` would work in most cases even for plain JavaScript projects.
 
 ## To do
 - [x] Add configuration files, split Vue and plain JavaScript
