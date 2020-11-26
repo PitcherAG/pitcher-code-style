@@ -1,3 +1,9 @@
+/** 
+|--------------------------------------------------
+| JavaScript rules, inherits eslint:recommended
+|--------------------------------------------------
+**/
+
 module.exports = {
   extends: ['eslint:recommended'],
   rules: {

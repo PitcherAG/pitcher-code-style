@@ -1,6 +1,14 @@
+/** 
+|--------------------------------------------------
+| Vue.js specific rules
+|--------------------------------------------------
+**/
+
+// inherit js rules
 const js = require.resolve('./javascript');
 
 module.exports = {
+  // declare globals
   globals: {
     $: true,
     Ti: true,
