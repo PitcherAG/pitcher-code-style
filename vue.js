@@ -50,6 +50,7 @@ module.exports = {
       extensions: ['vue']
     }],
     'vue/no-reserved-component-names': ['error'],
+    'vue/singleline-html-element-content-newline': 0,
     'vue/max-attributes-per-line': [
       'error',
       {
