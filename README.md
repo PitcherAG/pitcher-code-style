@@ -51,6 +51,7 @@ module.exports = {
 
 ## To do
 - [x] Add configuration files, split Vue and plain JavaScript
+- [ ] Add IDE specific configurations (VSCode, IntelliJ)
 - [ ] Add code style rules for JS, Vue, CSS under `README.md` with visual examples
 - [ ] Add rules for component naming, vue essentials with visual examples
 
