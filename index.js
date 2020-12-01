@@ -1,7 +1,7 @@
-const js = require.resolve('./javascript');
-const vue = require.resolve('./vue');
+const js = require.resolve('./javascript')
+const vue = require.resolve('./vue')
 
 module.exports = {
   // Export by default JS & Vue config
-  extends: [js, vue],
+  extends: [js, vue]
 }
