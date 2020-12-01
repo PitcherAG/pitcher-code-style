@@ -3,6 +3,6 @@
     "es6": true,
     "node": true
   },
-  "extends": ["./javascript.js"]
+  "extends": ["./index.js"]
 
 }
