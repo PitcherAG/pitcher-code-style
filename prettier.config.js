@@ -1,10 +1,10 @@
 // File is used in vue.js to get the rules
 
-const pConfig = require('./pitcher.config')
+const pitcherConfig = require('./pitcher.config')
 
 module.exports = {
-  printWidth: pConfig.printWidth,
-  tabWidth: pConfig.indent,
+  printWidth: pitcherConfig.printWidth,
+  tabWidth: pitcherConfig.indent,
   singleQuote: true,
   semi: false,
   trailingComma: 'none',
