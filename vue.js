@@ -27,6 +27,7 @@ module.exports = {
     /* Naming rules*/
     'vue/custom-event-name-casing': ['error'],
     'vue/component-name-in-template-casing': ['error', 'kebab-case'],
+    'vue/component-definition-name-casing': ['error', 'kebab-case'],
     'vue/no-reserved-component-names': ['error'],
 
     /* Component rules */

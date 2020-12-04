@@ -1,3 +1,6 @@
+## 1.1.1
+ - add component definition name casing, kebab-case
+
 ## 1.1.0
  - added prettier & prettier rules
  - disabled `vue/max-attributes-per-line` as it is colliding with prettier
