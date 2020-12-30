@@ -72,7 +72,7 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 - **gettext.config.js** ─ configuration file for `gettext`
 - **ti-web-config.json** ─ configuration file for `ti-web`. This file is used to fetch local db & simulate ti environment to be able to run the project on a browser
 
-### Naming Conventions for Components/Views
+### Naming Conventions for Components/Views and structure
 #### Components
 - File name should be written in **kebab-case**
 - Every component should always contain `name` property written in **kebab-case**
