@@ -129,15 +129,125 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 ```
 
 
+### Vue
+
+#### ESLint rules
+All Vue related eslint rules are provided by [eslint-plugin-vue](https://eslint.vuejs.org/rules/). We take `plugin:vue/vue3-strongly-recommended` set as a base and on the top of it we have a couple of custom rules. These rules exist in `vue.js`. We also have `prettier` plugin installed which helps us to lint/format vue files.
+
+#### Using shorthands
+Use always shorthands when using template bindings. The reason for this is to keep template part clean and readable
+
+**Closing tags** 
+Use always self closing tag when applicable
+```html
+<!-- ✗ BAD -->
+<i class="fa fa-times"></i>
+
+<!-- ✓ GOOD -->
+<i class="fa fa-times" />
+````
+
+**Props/Data**
+```html
+<!-- ✗ BAD -->
+<input v-bind:value="value" />
+
+<!-- ✓ GOOD -->
+<input :value="value" />
+````
+
+**Events**
+```html
+<!-- ✗ BAD -->
+<input v-on:click="handleClick" />
+
+<!-- ✓ GOOD -->
+<input @click="handleClick" />
+````
+
+**Named slots**
+```html
+<!-- ✗ BAD -->
+<template v-slot:header></template>
+
+<!-- ✓ GOOD -->
+<template #header></template>
+````
+
 ### JavaScript
 
+#### ESLint rules
+For JavaScript linting we do use `eslint:recommended` set as a base. A couple of custom rules on the top of recommended set exist in `javascript.js`. We also have `prettier` plugin installed which helps us to lint/format javascript files.
+
 ### CSS
+#### Methodology
+When applicable/needed, you can use BEM methodology to get a clear understanding of your html. If BEM is not applicable/needed, do follow the naming conventions below.
+
+#### Naming rules
+It is required to use `kebab-case` when adding classes to your elements. This helps us to separate variables and css classes when reading the code, also provides us more readable/maintainable code on scss/less part. 
+
+**Example**
+```html
+<!-- ✗ BAD -->
+<template>
+  <div class="testParent">
+    <span class="testChild"></span>
+  </div>
+</template>
+
+<style lang="scss">
+.testParent {
+  background-color: red;
+}
+.testChild {
+  color: white;
+}
+</style>
+
+<!-- ✓ GOOD -->
+<template>
+  <div class="test-parent">
+    <span class="test-child"></span>
+  </div>
+</template>
+
+<style lang="scss">
+.test-parent {
+  background-color: red;
+
+  .test-child {
+    color: white;
+  }
+}
+</style>
+
+<!-- ✓✓ EVEN BETTER with BEM -->
+<template>
+  <div class="test">
+    <span class="test__header"></span>
+    <span class="test__subheader"></span>
+  </div>
+</template>
+
+<style lang="scss">
+.test {
+  background-color: red;
+
+  &__header {
+    color: white;
+  }
+
+  &__subheader {
+    color: grey;
+  }
+}
+</style>
+````
 
 
 ## To do
 - [x] Add configuration files, split Vue and plain JavaScript
-- [ ] Add IDE specific configurations (VSCode, IntelliJ)
-- [ ] Add code style rules for JS, Vue, CSS under `README.md` with visual examples
-- [ ] Add rules for component naming, vue essentials with visual examples
+- [ ] Add IntelliJ configuration
+- [-] Add code style rules for JS, Vue, CSS under `README.md` with visual examples
 
 
