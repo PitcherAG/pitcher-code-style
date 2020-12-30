@@ -78,11 +78,44 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 - Every component should always contain `name` property written in **kebab-case**
 - If a component has more than 1 file, they should be contained in the same folder e.g. `components/list` folder contains `list.vue`, `list-item.vue`, `list-header.vue`
 
-#### Views
-- File name should be written in **kebab-case** and should contain `.view` e.g. `app-login.view.vue`, `app-list.view.vue`
-- Every view should always contain `name` property written in **kebab-case** e.g. `name: 'app-login'`
-- Depending on your project size, if you have your views and routes next to each other, they should be contained in the same folder e.g. `views/app-login` folder contains `app-login.view.vue` and `app-login.route.js`
+** Example **
+```
+├─ components/
+│  ├── card.vue
+│  ├── footer.vue
+│  └── list/
+│      ├── list.vue
+│      ├── list-header.vue
+│      └── list-item.vue
+```
 
+#### Views
+- File name should be written in **kebab-case** and should contain `.view` suffix e.g. `app-login.view.vue`, `app-list.view.vue`
+- Every view should always contain `name` property written in **kebab-case** e.g. `name: 'app-login'`
+- Depending on your project size, if you have your views and routes next to each other, they should be contained in a catalog e.g. `views/app-login` folder contains `app-login.view.vue` and `app-login.route.js`
+
+Example (small projects)
+```
+├─ views/
+│  ├── home.view.vue
+│  ├── login.view.vue
+│  └── etc.
+```
+
+Example (mid/large projects, where views and their routes are contained together)
+```
+├─ views/
+│  │
+│  ├── home
+│  │   ├── home.view.vue
+│  │   └── home.router.js
+│  │
+│  ├── login
+│  │   ├── login.view.vue
+│  │   └── login.router.js
+│  │
+│  └── etc.
+```
 
 
 ### JavaScript
