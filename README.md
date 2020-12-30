@@ -16,10 +16,11 @@ Code style guide for JavaScript &amp; Vue projects, eslint rule package
 2. In your `.eslintrc.js` or `.eslintrc.json` file add
     - for Vue projects: `extends: ["@pitcher"]` or `extends: ["@pitcher/eslint-config/vue"]`
     - for plain JavaScript projects: `extends: ["@pitcher/eslint-config/javascript"]`
+3. Delete `prettier.config.js` if you have it in your project as it is already included in pitcher eslint config
   
 **NOTE:** By default the package exports **Vue** configuration. So using `extends: ["@pitcher"]` would work in most cases even for plain JavaScript projects. 
 
-#### command to install
+#### Command to install
 ```
 npm install -D eslint@7.14.0 prettier@1.19.1 babel-eslint@10.1.0 eslint-plugin-vue@7.1.0 eslint-plugin-prettier@3.1.4 @vue/eslint-config-prettier@6.0.0
 ```
@@ -37,6 +38,16 @@ module.exports = {
   }
 }
 ```
+
+## IDE Configurations
+
+### VSCode
+To use pre-defined VSCode settings/extensions/snippets: 
+1. Download [Settings Sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) in VSCode
+2. Fork the gist [here](https://gist.github.com/elibolonur/65543882140d65ff8d5fce366f8a2996)
+3. Copy forked Gist ID (found in browser url after forking)
+4. Use it in Settings Sync settings to download the settings
+5. After download, check your VSCode settings (open VSCode settings as json) to see if the Gist ID is correct. It might be uncorrect as after the download it might still have the ID before the fork.
 
 ## Code Style
 Style rules that are presented here are based on best-practices in JavaScript ecosystem. Most of the rules here are enforced through eslint and it is strongly recommended to follow. Some of the rules might not apply depending on your project size. 
@@ -94,7 +105,7 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 - Every view should always contain `name` property written in **kebab-case** e.g. `name: 'app-login'`
 - Depending on your project size, if you have your views and routes next to each other, they should be contained in a catalog e.g. `views/app-login` folder contains `app-login.view.vue` and `app-login.route.js`
 
-Example (small projects)
+**Example (small projects)**
 ```
 ├─ views/
 │  ├── home.view.vue
@@ -102,7 +113,7 @@ Example (small projects)
 │  └── etc.
 ```
 
-Example (mid/large projects, where views and their routes are contained together)
+**Example (mid/large projects, where views and their routes are contained together)**
 ```
 ├─ views/
 │  │
