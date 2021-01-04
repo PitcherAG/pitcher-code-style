@@ -53,7 +53,13 @@ module.exports = {
   }
 }
 ```
+ 
+<br />
 
+---
+ 
+<br />
+  
 <div id="ide-config" />
 
 ## IDE Configurations
@@ -72,6 +78,12 @@ To use pre-defined IntelliJ code style configuration:
 
 1. Use `config/code-style.jetbrains.xml` file
 2. Follow the guide [here](https://www.jetbrains.com/help/idea/copying-code-style-settings.html) to import settings
+
+<br />
+
+---
+ 
+<br />
 
 <div id="code-style" />
 
