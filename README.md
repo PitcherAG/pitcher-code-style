@@ -1,8 +1,23 @@
 # pitcher-code-style
 Code style guide for JavaScript &amp; Vue projects, eslint rule package
 
-#### npm package name: @pitcher/eslint-config  
-  
+#### npm package name: @pitcher/eslint-config
+ 
+ 
+## Table Of Contents
+- [Using Eslint Configuration](#eslint-config)
+- [IDE Configurations](#ide-config)
+  - [VS Code](#ide-config)
+  - [IntelliJ](#ide-config)
+- [Code Style](#code-style)
+  - [Project Structure](#project-structure)
+  - [Naming Conventions](#naming-conventions)
+  - [Vue Code Style](#vue-code-style)
+  - [JS Code Style](#js-code-style)
+  - [CSS Code Style](#css-code-style)
+
+
+<div id="eslint-config" />
 
 ## Using Eslint Configuration
 0. Make sure you have installed: 
@@ -39,6 +54,8 @@ module.exports = {
 }
 ```
 
+<div id="ide-config" />
+
 ## IDE Configurations
 
 ### VSCode
@@ -49,8 +66,20 @@ To use pre-defined VSCode settings/extensions/snippets:
 4. Use it in Settings Sync settings to download the settings
 5. After download, check your VSCode settings (open VSCode settings as json) to see if the Gist ID is correct. It might be uncorrect as after the download it might still have the ID before the fork.
 
+
+### IntelliJ
+To use pre-defined IntelliJ code style configuration:
+
+1. Use `config/code-style.jetbrains.xml` file
+2. Follow the guide [here](https://www.jetbrains.com/help/idea/copying-code-style-settings.html) to import settings
+
+<div id="code-style" />
+
 ## Code Style
 Style rules that are presented here are based on best-practices in JavaScript ecosystem. Most of the rules here are enforced through eslint and it is strongly recommended to follow. Some of the rules might not apply depending on your project size. 
+
+
+<div id="project-structure" />
 
 ### Project structure
 ```
@@ -83,13 +112,16 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 - **gettext.config.js** ─ configuration file for `gettext`
 - **ti-web-config.json** ─ configuration file for `ti-web`. This file is used to fetch local db & simulate ti environment to be able to run the project on a browser
 
+
+<div id="naming-conventions" />
+
 ### Naming Conventions for Components/Views and structure
 #### Components
 - File name should be written in **kebab-case**
 - Every component should always contain `name` property written in **kebab-case**
 - If a component has more than 1 file, they should be contained in the same folder e.g. `components/list` folder contains `list.vue`, `list-item.vue`, `list-header.vue`
 
-** Example **
+**Example**
 ```
 ├─ components/
 │  ├── card.vue
@@ -128,6 +160,8 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 │  └── etc.
 ```
 
+
+<div id="vue-code-style" />
 
 ### Vue
 
@@ -174,10 +208,17 @@ Use always self closing tag when applicable
 <template #header></template>
 ````
 
-### JavaScript
+<div id="js-code-style" />
+
+### JavaScript 
+
+To be updated
 
 #### ESLint rules
 For JavaScript linting we do use `eslint:recommended` set as a base. A couple of custom rules on the top of recommended set exist in `javascript.js`. We also have `prettier` plugin installed which helps us to lint/format javascript files.
+
+
+<div id="css-code-style" />
 
 ### CSS
 #### Methodology
@@ -246,8 +287,6 @@ It is required to use `kebab-case` when adding classes to your elements. This he
 
 
 ## To do
-- [x] Add configuration files, split Vue and plain JavaScript
-- [ ] Add IntelliJ configuration
-- [-] Add code style rules for JS, Vue, CSS under `README.md` with visual examples
+- [ ] Add code style rules for JS, Vue, CSS under `README.md` with visual examples
 
 
