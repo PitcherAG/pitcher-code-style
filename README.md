@@ -68,8 +68,8 @@ module.exports = {
 To use pre-defined VSCode settings/extensions/snippets: 
 1. Download [Settings Sync extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) in VSCode
 2. Fork the gist [here](https://gist.github.com/elibolonur/65543882140d65ff8d5fce366f8a2996)
-3. Copy forked Gist ID (found in browser url after forking)
-4. Use it in Settings Sync settings to download the settings
+3. Copy forked Gist ID (found in browser url after forking, remember it should be your gist, not the one you forked!)
+4. Add it to Settings Sync settings to download the settings (cmd + shift + P in VS code, write Sync: Download, the download option should appear)
 5. After download, check your VSCode settings (open VSCode settings as json) to see if the Gist ID is correct. It might be uncorrect as after the download it might still have the ID before the fork.
 
 
