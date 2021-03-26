@@ -8,9 +8,16 @@ const pitcherConfig = require('./pitcher.config')
 
 module.exports = {
   extends: ['eslint:recommended'],
+  plugins: ['sort-imports-es6-autofix'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'sort-imports-es6-autofix/sort-imports-es6': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none'],
+      },
+    ],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     indent: ['error', pitcherConfig.indent],
     'max-len': [
@@ -18,32 +25,57 @@ module.exports = {
       {
         code: pitcherConfig.printWidth,
         ignoreComments: true,
-        ignoreUrls: true
-      }
+        ignoreUrls: true,
+      },
     ],
-    'no-prototype-builtins': 1,
-    'no-empty': 1,
-    'no-var': 1,
-    'no-unused-vars': 2,
+    'no-unused-vars': 'error',
     'object-curly-spacing': ['error', 'always'],
     'space-in-parens': ['error', 'never'],
     'array-bracket-spacing': ['error', 'never'],
-    'prefer-arrow-callback': 1,
+    'prefer-arrow-callback': 'error',
     'arrow-parens': ['error', 'as-needed'],
     'prefer-const': [
       'error',
       {
         destructuring: 'any',
-        ignoreReadBeforeAssign: false
-      }
+        ignoreReadBeforeAssign: false,
+      },
     ],
     'space-before-function-paren': [
       'error',
       {
         anonymous: 'never',
         named: 'never',
-        asyncArrow: 'always'
-      }
-    ]
-  }
+        asyncArrow: 'always',
+      },
+    ],
+    'prefer-template': 'error',
+    'dot-notation': 'error',
+    'no-new-wrappers': 'error',
+    'no-new-object': 'error',
+    'consistent-return': 'error',
+    'no-confusing-arrow': 'error',
+    'prefer-spread': 'error',
+    'no-param-reassign': 'error',
+    'default-case': 'error',
+    'no-lonely-if': 'error',
+    'one-var': ['error', 'never'],
+    radix: ['error', 'as-needed'],
+    eqeqeq: 'error',
+    'object-shorthand': ['error', 'always'],
+    'no-throw-literal': 'error',
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+      { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+      { blankLine: 'always', prev: 'directive', next: '*' },
+      { blankLine: 'any', prev: 'directive', next: 'directive' },
+    ],
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-prototype-builtins': 'warn',
+    'no-empty': 'warn',
+    'no-var': 'warn',
+  },
 }
