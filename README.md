@@ -128,32 +128,33 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 <div id="naming-conventions" />
 
 ### Naming Conventions for Components/Views and structure
+
 #### Components
-- File name should be written in **kebab-case**
-- Every component should always contain `name` property written in **kebab-case**
-- If a component has more than 1 file, they should be contained in the same folder e.g. `components/list` folder contains `list.vue`, `list-item.vue`, `list-header.vue`
+- File names in general (.vue, .js, .html etc.), should be written in **PascalCase** or **camelCase**
+- Every component should always contain `name` property written in **PascalCase**
+- If a component has more than 1 file, they should be contained in the same folder e.g. `components/list` folder contains `List.vue`, `ListItem.vue`, `ListHeader.vue`
 
 **Example**
 ```
 ├─ components/
-│  ├── card.vue
-│  ├── footer.vue
-│  └── list/
-│      ├── list.vue
-│      ├── list-header.vue
-│      └── list-item.vue
+│  ├── Card.vue
+│  ├── Footer.vue
+│  └── List/
+│      ├── List.vue
+│      ├── ListHeader.vue
+│      └── ListItem.vue
 ```
 
 #### Views
-- File name should be written in **kebab-case** and should contain `.view` suffix e.g. `app-login.view.vue`, `app-list.view.vue`
-- Every view should always contain `name` property written in **kebab-case** e.g. `name: 'app-login'`
-- Depending on your project size, if you have your views and routes next to each other, they should be contained in a catalog e.g. `views/app-login` folder contains `app-login.view.vue` and `app-login.route.js`
+- File name should be written in **PascalCase** or **camelCase** and should contain `.view` suffix e.g. `AppLogin.view.vue`, `AppList.view.vue`
+- Every view should always contain `name` property written in **PascalCase** e.g. `name: 'AppLogin'`
+- Depending on your project size, if you have your views and routes next to each other, they should be contained in a catalog e.g. `views/AppLogin` folder contains `AppLogin.view.vue` and `AppLogin.route.js`
 
 **Example (small projects)**
 ```
 ├─ views/
-│  ├── home.view.vue
-│  ├── login.view.vue
+│  ├── Home.view.vue
+│  ├── Login.view.vue
 │  └── etc.
 ```
 
@@ -162,12 +163,12 @@ Style rules that are presented here are based on best-practices in JavaScript ec
 ├─ views/
 │  │
 │  ├── home
-│  │   ├── home.view.vue
-│  │   └── home.router.js
+│  │   ├── Home.view.vue
+│  │   └── Home.router.js
 │  │
 │  ├── login
-│  │   ├── login.view.vue
-│  │   └── login.router.js
+│  │   ├── Login.view.vue
+│  │   └── Login.router.js
 │  │
 │  └── etc.
 ```
