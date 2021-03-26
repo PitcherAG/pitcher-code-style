@@ -7,7 +7,7 @@ module.exports = {
   tabWidth: pitcherConfig.indent,
   singleQuote: true,
   semi: false,
-  trailingComma: 'none',
-  arrowParens: 'avoid',
-  htmlWhitespaceSensitivity: 'ignore'
+  trailingComma: 'es5',
+  arrowParens: 'always',
+  htmlWhitespaceSensitivity: 'ignore',
 }
