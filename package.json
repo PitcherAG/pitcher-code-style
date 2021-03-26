@@ -35,7 +35,6 @@
     "babel-eslint": ">=10.1.0",
     "eslint": ">=7.14.0",
     "eslint-plugin-prettier": ">=3.1.4",
-    "eslint-plugin-sort-imports-es6-autofix": ">=0.6.0",
     "eslint-plugin-vue": ">=7.1.0",
     "prettier": ">=1.9.1"
   },
@@ -46,5 +45,8 @@
     "eslint-plugin-prettier": ">=3.1.4",
     "eslint-plugin-vue": ">=7.1.0",
     "prettier": ">=1.9.1"
+  },
+  "dependencies": {
+    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0"
   }
 }
