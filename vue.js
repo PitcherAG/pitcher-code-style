@@ -1,4 +1,4 @@
-/** 
+/**
 |--------------------------------------------------
 | Vue.js specific rules
 |--------------------------------------------------
@@ -17,7 +17,7 @@ module.exports = {
     PLATFORM: true,
     $gettext: true,
     $ngettext: true,
-    $t: true
+    $t: true,
   },
   extends: ['plugin:vue/vue3-strongly-recommended', js, '@vue/prettier'],
   rules: {
@@ -37,8 +37,8 @@ module.exports = {
     'vue/no-unused-properties': [
       'error',
       {
-        groups: ['props', 'setup']
-      }
+        groups: ['props', 'setup'],
+      },
     ],
     'vue/no-potential-component-option-typo': ['warn'],
     // Disabled for now
@@ -62,10 +62,10 @@ module.exports = {
           'OTHER_DIRECTIVES',
           'OTHER_ATTR',
           'CONTENT',
-          'EVENTS'
+          'EVENTS',
         ],
-        alphabetical: false
-      }
+        alphabetical: false,
+      },
     ],
 
     /* Template rules */
@@ -92,8 +92,8 @@ module.exports = {
         ignoreTemplateLiterals: false,
         ignoreRegExpLiterals: false,
         ignoreHTMLAttributeValues: false,
-        ignoreHTMLTextContents: false
-      }
+        ignoreHTMLTextContents: false,
+      },
     ],
     // Disabled completely, as this is colliding with Prettier
     // 'vue/max-attributes-per-line': [
@@ -114,8 +114,8 @@ module.exports = {
         baseIndent: 1,
         closeBracket: 0,
         alignAttributesVertically: true,
-        ignores: []
-      }
+        ignores: [],
+      },
     ],
     'vue/html-self-closing': [
       'error',
@@ -123,34 +123,41 @@ module.exports = {
         html: {
           void: 'always',
           normal: 'always',
-          component: 'always'
+          component: 'always',
         },
         svg: 'always',
-        math: 'always'
-      }
+        math: 'always',
+      },
     ],
     'vue/html-closing-bracket-newline': [
       'error',
       {
         singleline: 'never',
-        multiline: 'always'
-      }
+        multiline: 'always',
+      },
     ],
     'vue/block-tag-newline': [
       'error',
       {
-        singleline: 'always'
-      }
+        singleline: 'always',
+      },
     ],
     'vue/no-static-inline-styles': [
       'error',
       {
-        allowBinding: true
-      }
-    ]
+        allowBinding: true,
+      },
+    ],
+    'vue/attribute-hyphenation': [
+      'error',
+      'never',
+      {
+        ignore: ['stroke-dasharray', 'stroke-width'],
+      },
+    ],
     // Enable when we migrate to Vue 3.x
     // 'vue/no-lone-template': ['error', {
     //   ignoreAccessible: false
     // }]
-  }
+  },
 }
