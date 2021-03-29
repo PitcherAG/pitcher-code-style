@@ -33,7 +33,7 @@ module.exports = {
     'space-in-parens': ['error', 'never'],
     'array-bracket-spacing': ['error', 'never'],
     'prefer-arrow-callback': 'error',
-    'arrow-parens': ['error', 'as-needed'],
+    'arrow-parens': ['error', 'always'],
     'prefer-const': [
       'error',
       {
