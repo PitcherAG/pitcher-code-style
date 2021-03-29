@@ -1,4 +1,4 @@
-## 1.2.0
+## 1.2.1
 | lib | rule | change | reason | 
 | ------ | ------ | ------ | ------ |
 | prettier | [trailingCommas](https://prettier.io/docs/en/options.html#trailing-commas) | `es5` | extensible object properties via duplicating lines that IMHO it's worth the visual noise of a comma (current prettier default) |
@@ -31,6 +31,13 @@
     ],
 ```
 
+Fixes:
+- Validation of v-slot usage
+```js
+'vue/valid-v-slot': ['error', {
+  allowModifiers: true,
+}],
+```
 
 ## 1.1.1
  - add component definition name casing, kebab-case
