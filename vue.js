@@ -26,8 +26,12 @@ module.exports = {
 
     /* Naming rules*/
     'vue/custom-event-name-casing': ['error'],
-    'vue/component-name-in-template-casing': ['error', 'kebab-case'],
-    'vue/component-definition-name-casing': ['error', 'kebab-case'],
+    "vue/component-name-in-template-casing": [
+      "error",
+      "PascalCase",
+      { "registeredComponentsOnly": false, "ignores": ["i18n"] }
+    ],
+    'vue/component-definition-name-casing': ['error', 'PascalCase'],
     'vue/no-reserved-component-names': ['error'],
 
     /* Component rules */
