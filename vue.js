@@ -73,6 +73,10 @@ module.exports = {
     'vue/no-duplicate-attr-inheritance': ['error'],
     'vue/singleline-html-element-content-newline': 0,
     'vue/this-in-template': ['error', 'never'],
+    'vue/valid-v-slot': ['error', {
+      allowModifiers: true,
+    }],
+
     // Disabled rule: can't be used with Vue 2.x, conflicts with no-v-for-template-key rule
     'vue/no-v-for-template-key-on-child': 0,
     'vue/padding-line-between-blocks': ['error', 'always'],
