@@ -20,28 +20,48 @@ Code style guide for JavaScript &amp; Vue projects, eslint rule package
 <div id="eslint-config" />
 
 ## Using Eslint Configuration
+There are multiple ways to apply pitcher-code-style to your project.
+
+### Option 1: Automatic installation for Vue projects
+If you want to apply ESLint configuration to a Vue project, this way might be the easiest way for you. 
+
+> **NOTE:** If your project is not a Vue project, this option will **NOT** work.
+
+#### Steps
+1. Open command line in the root of your project
+2. Run `vue add @pitcher/pitcherify`
+3. Check `code-style - Pitcher ESLint config` option with space, press Enter
+4. It will automatically install all needed packages and create configuration files
+
+### Option 2: Manual installation
+This option might consume a bit more time than Option 1, but you have freedom to apply these settings to plain JavaScript projects as well.
+
+#### Steps
 0. Make sure you have installed: 
     - `eslint` version `>=7.14.0`
     - `prettier` version `>=1.19.1` (works with 2+ as well)
     - `babel-eslint` version `>=10.1.0"`
-    - `eslint-plugin-vue` version `>=7.1.0`
+    - `eslint-plugin-vue` version `>=7.8.0`
     - `eslint-plugin-prettier` version `>=3.1.4`
     - `@vue/eslint-config-prettier` version `>=6.0.0`
 1. Install package with: `npm install -D @pitcher/eslint-config`
 2. In your `.eslintrc.js` or `.eslintrc.json` file add
     - for Vue projects: replace extends with `extends: ["@pitcher"]` or `extends: ["@pitcher/eslint-config/vue"]`
     - for plain JavaScript projects: replace extends with `extends: ["@pitcher/eslint-config/javascript"]`
-3. Delete `prettier.config.js` if you have it in your project as it is already included in pitcher eslint config
+3. Replace the content of `prettier.config.js` with
+```js
+module.exports = require('@pitcher/eslint-config/prettier.config')
+```
   
-**NOTE:** By default the package exports **Vue** configuration. So using `extends: ["@pitcher"]` would work in most cases even for plain JavaScript projects. 
+> **NOTE:** By default the package exports **Vue** configuration. So using `extends: ["@pitcher"]` would work in most cases even for plain JavaScript projects. 
 
 #### Command to install
 ```
-npm install -D eslint@7.14.0 prettier@1.19.1 babel-eslint@10.1.0 eslint-plugin-vue@7.1.0 eslint-plugin-prettier@3.1.4 @vue/eslint-config-prettier@6.0.0
+npm install -D eslint@7.14.0 prettier@1.19.1 babel-eslint@10.1.0 eslint-plugin-vue@7.8.0 eslint-plugin-prettier@3.1.4 @vue/eslint-config-prettier@6.0.0
 ```
  
 #### Example .eslintrc.js file
-```javascript
+```js
 module.exports = {
   root: true,
   env: {
@@ -52,6 +72,12 @@ module.exports = {
     parser: 'babel-eslint'
   }
 }
+```
+
+#### Example prettier.config.js file
+```js
+module.exports = require('@pitcher/eslint-config/prettier.config')
+
 ```
  
 <br />
