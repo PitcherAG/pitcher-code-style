@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/PitcherAG/pitcher-code-style/compare/v1.2.1...v1.3.0) (2021-09-17)
+
+
+### Features
+
+* es5 configuration ([#5](https://github.com/PitcherAG/pitcher-code-style/issues/5)) ([09ba350](https://github.com/PitcherAG/pitcher-code-style/commit/09ba35070c5d9dc1992f22f931e7d4a7f88547a6))
+* semantic release setup ([#6](https://github.com/PitcherAG/pitcher-code-style/issues/6)) ([0e1f600](https://github.com/PitcherAG/pitcher-code-style/commit/0e1f600dcbc1103854c7100fc8ae03c146c8bc62))
+
 ## 1.2.1
 | lib | rule | change | reason | 
 | ------ | ------ | ------ | ------ |
