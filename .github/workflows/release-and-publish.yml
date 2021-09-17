@@ -1,0 +1,27 @@
+name: Release and Publish
+on:
+  push:
+    branches:
+      - release
+jobs:
+  release-and-publish:
+    name: Release and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+      - name: Install dependencies
+        run: npm install
+      - name: Semantic release
+        uses: cycjimmy/semantic-release-action@v2
+        id: semantic_release
+        with:
+          semantic_version: 17.4.2
+          extra_plugins: |
+            @semantic-release/changelog@5.0.1
+            @semantic-release/git@9.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_ACCESS_RELEASE_ONUR }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_ONUR }}
