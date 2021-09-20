@@ -1,4 +1,4 @@
-// File is used in vue.js to get the rules
+// File is used in project root to get the prettier rules
 
 const pitcherConfig = require('./pitcher.config')
 
