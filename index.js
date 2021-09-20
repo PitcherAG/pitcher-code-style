@@ -1,3 +1,4 @@
+// Default config
 const js = require.resolve('./javascript')
 const vue = require.resolve('./vue')
 
