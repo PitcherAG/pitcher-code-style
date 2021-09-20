@@ -54,6 +54,7 @@ This option might consume a bit more time than Option 1, but you have freedom to
 2. In your `.eslintrc.js` or `.eslintrc.json` file add
    - for Vue projects: replace extends with `extends: ["@pitcher"]` or `extends: ["@pitcher/eslint-config/vue"]`
    - for plain JavaScript projects: replace extends with `extends: ["@pitcher/eslint-config/javascript"]`
+   - for ES5 based projects (without Vue) check the instructions [here](#eslint-config-es5)
 3. Replace the content of `prettier.config.js` with
 
 ```js
