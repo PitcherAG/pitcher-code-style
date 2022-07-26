@@ -9,28 +9,22 @@ const pitcherConfig = require('./pitcher.config')
 module.exports = {
   extends: ['eslint:recommended'],
   plugins: ['import', 'node'],
-  settings: {
-    'import/resolver': {
-      webpack: {
-        config: 'node_modules/@vue/cli-service/webpack.config.js',
-      },
-    },
-  },
   rules: {
     'import/order': [
-      'error', {
+      'error',
+      {
         groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
         pathGroups: [
           {
             pattern: '@/**',
             group: 'external',
-            position: 'after'
-          }
+            position: 'after',
+          },
         ],
-        pathGroupsExcludedImportTypes: ['builtin']
-      }
+        pathGroupsExcludedImportTypes: ['builtin'],
+      },
     ],
-    "import/newline-after-import": ['error', { count: 1 }],
+    'import/newline-after-import': ['error', { count: 1 }],
     'node/file-extension-in-import': ['error', 'always', { '.js': 'never', '.vue': 'never', '.ts': 'never' }],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     indent: ['error', pitcherConfig.indent],
