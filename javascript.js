@@ -8,20 +8,14 @@ const pitcherConfig = require('./pitcher.config')
 
 module.exports = {
   extends: ['eslint:recommended'],
-  plugins: ['import', 'node'],
+  plugins: ['sort-imports-es6-autofix', 'import', 'node'],
   rules: {
-    'import/order': [
+    'sort-imports-es6-autofix/sort-imports-es6': [
       'error',
       {
-        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
-        pathGroups: [
-          {
-            pattern: '@/**',
-            group: 'external',
-            position: 'after',
-          },
-        ],
-        pathGroupsExcludedImportTypes: ['builtin'],
+        ignoreCase: false,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none'],
       },
     ],
     'import/newline-after-import': ['error', { count: 1 }],
