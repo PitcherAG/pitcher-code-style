@@ -25,7 +25,12 @@ module.exports = {
     'prettier/prettier': ['error', prettierConfig],
 
     /* Naming rules*/
-    'vue/custom-event-name-casing': ['error'],
+    'vue/custom-event-name-casing': ["error",
+      "camelCase",
+      {
+        "ignores": []
+      }
+    ],
     'vue/component-name-in-template-casing': [
       'error',
       'PascalCase',

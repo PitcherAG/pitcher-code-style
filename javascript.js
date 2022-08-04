@@ -8,7 +8,7 @@ const pitcherConfig = require('./pitcher.config')
 
 module.exports = {
   extends: ['eslint:recommended'],
-  plugins: ['sort-imports-es6-autofix'],
+  plugins: ['sort-imports-es6-autofix', 'import', 'node'],
   rules: {
     'sort-imports-es6-autofix/sort-imports-es6': [
       'error',
@@ -18,6 +18,8 @@ module.exports = {
         memberSyntaxSortOrder: ['all', 'single', 'multiple', 'none'],
       },
     ],
+    'import/newline-after-import': ['error', { count: 1 }],
+    'node/file-extension-in-import': ['error', 'always', { '.js': 'never', '.vue': 'never', '.ts': 'never' }],
     quotes: ['error', 'single', { allowTemplateLiterals: true }],
     indent: ['error', pitcherConfig.indent],
     'max-len': [
@@ -28,7 +30,7 @@ module.exports = {
         ignoreUrls: true,
       },
     ],
-    'no-unused-vars': 'error',
+    'no-unused-vars': ['error', { vars: 'all', args: 'after-used', ignoreRestSiblings: true }],
     'object-curly-spacing': ['error', 'always'],
     'space-in-parens': ['error', 'never'],
     'array-bracket-spacing': ['error', 'never'],
@@ -66,7 +68,7 @@ module.exports = {
     'no-throw-literal': 'error',
     'padding-line-between-statements': [
       'error',
-      { blankLine: 'always', prev: '*', next: 'return' },
+      { blankLine: 'any', prev: '*', next: 'return' },
       { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
       { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
       { blankLine: 'always', prev: 'directive', next: '*' },
