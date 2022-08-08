@@ -1,3 +1,16 @@
+# [1.4.0](https://github.com/PitcherAG/pitcher-code-style/compare/v1.3.0...v1.4.0) (2022-08-08)
+
+
+### Bug Fixes
+
+* remove unused dependency and config [PLA-6929] ([97982e9](https://github.com/PitcherAG/pitcher-code-style/commit/97982e9f68b67c81cb92f2ad446edc294d171c49))
+
+
+### Features
+
+* apply rule updates based on CoP discussions [PLA-6929] ([70ae494](https://github.com/PitcherAG/pitcher-code-style/commit/70ae4942d2bc6f4c2ac514095c9a96602a7a223f))
+* essential configuration added ([#7](https://github.com/PitcherAG/pitcher-code-style/issues/7)) ([f3ce235](https://github.com/PitcherAG/pitcher-code-style/commit/f3ce2352b71be2a8cd676f431ac85c2fd727442b))
+
 # [1.3.0](https://github.com/PitcherAG/pitcher-code-style/compare/v1.2.1...v1.3.0) (2021-09-17)
 
 
