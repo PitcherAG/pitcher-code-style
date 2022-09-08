@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/PitcherAG/pitcher-code-style/compare/v1.4.0...v1.4.1) (2022-09-08)
+
+
+### Bug Fixes
+
+* add lacking peerDependencies [PLA-6929] ([7304aa2](https://github.com/PitcherAG/pitcher-code-style/commit/7304aa259d530b46b66648748ec8485a165ba516))
+
 # [1.4.0](https://github.com/PitcherAG/pitcher-code-style/compare/v1.3.0...v1.4.0) (2022-08-08)
 
 
