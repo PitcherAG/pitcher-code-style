@@ -1,6 +1,6 @@
 {
   "name": "@pitcher/eslint-config",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Code style guide and ESLint configuration for JavaScript & Vue projects",
   "author": "Pitcher AG",
   "license": "ISC",

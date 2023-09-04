@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/PitcherAG/pitcher-code-style/compare/v1.4.1...v1.5.0) (2023-09-04)
+
+
+### Features
+
+* disable padding between statements rule ([37b73c1](https://github.com/PitcherAG/pitcher-code-style/commit/37b73c17bda19e53fe57ddb9117a816fc02f06eb))
+
 ## [1.4.1](https://github.com/PitcherAG/pitcher-code-style/compare/v1.4.0...v1.4.1) (2022-09-08)
 
 
